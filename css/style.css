@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&family=Roboto+Slab:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/background.jpg');
+    font-family: 'Hepta Slab', serif;
+    font-size: 15px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.models {
+    display: none;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 60px;
+    background-color: #cc3d3d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-left: 1rem;
+    color: #fff;
+    font-family: 'Qwitcher Grypen', cursive;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+header nav {
+    display: flex;
+    gap: 4em;
+}
+
+header nav a {
+    color: #fff;
+    font-size: 2em;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+}
+
+.menu-openner {
+    margin-right: 15px;
+    font-size: 22px;
+    background-color: #ef9a9a;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-openner span {
+    margin-right: 10px;
+}
+
+.container {
+    width: 80%;
+    background-color: rgba(254, 255, 238, 0.89);
+    border-radius: 2em;
+    padding: 4em;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 1em;
+}
+
+.conteudo-principal-escrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.conteudo-principal-escrito a {
+    color: black;
+}
+
+.conteudo-formas-pagamento h2 {
+    margin-bottom: 1em;
+}
+
+.conteudo-formas-pagamento img {
+    width: 300px;
+}
+
+@media (max-width:1050px) {
+    .lanche-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header nav {
+        display: flex;
+        gap: 1.7em;
+    }
+
+    header nav a {
+        color: #fff;
+        font-size: 2em;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .conteudo-principal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .conteudo-principal-escrito {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conteudo-formas-pagamento img {
+        width: 250px;
+    }
+}
+
+
+@media (max-width:800px) {
+    body {
+        flex-direction: column;
+    }
+
+    header {
+        display: flex;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header nav {
+        gap: 1.5em;
+    }
+
+    header nav a {
+        color: #fff;
+        font-size: 1.5em;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .conteudo-principal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .conteudo-principal-escrito {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conteudo-formas-pagamento img {
+        width: 150px;
+    }
+
+}
