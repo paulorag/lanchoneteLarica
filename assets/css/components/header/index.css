@@ -1,0 +1,42 @@
+@import url("menu.css");
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 60px;
+    background-color: #cc3d3d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo {
+    margin-left: 1rem;
+    color: #fff;
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+@media (max-width: 1024px) {
+    .titulo {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 35vh;
+    }
+}

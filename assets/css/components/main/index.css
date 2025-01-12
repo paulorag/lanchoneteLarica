@@ -1,0 +1,74 @@
+.container {
+    width: 80%;
+    background-color: rgba(254, 255, 238, 0.89);
+    border-radius: 2em;
+    padding: 4em;
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+}
+
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: 1em;
+}
+
+.conteudo-principal-escrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.conteudo-principal-escrito a {
+    color: black;
+}
+
+.conteudo-formas-pagamento h2 {
+    margin-bottom: 1em;
+}
+
+.conteudo-formas-pagamento img {
+    width: 300px;
+}
+
+@media (max-width: 1024px) {
+    .conteudo-formas-pagamento img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    .conteudo-principal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .conteudo-principal-escrito {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conteudo-formas-pagamento img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        margin-top: 30vh;
+    }
+}

@@ -1,0 +1,91 @@
+.menu {
+    display: flex;
+    gap: 8em;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 2em;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+}
+
+.sideMenu {
+    display: none;
+    visibility: hidden;
+}
+
+.menu.active {
+    right: 0;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.sideMenu img {
+    position: relative;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.menu-openner {
+    margin-right: 15px;
+    font-size: 22px;
+    background-color: #ef9a9a;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-openner span {
+    margin-right: 10px;
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        gap: 4em;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        gap: 1.5em;
+    }
+
+    .menu a {
+        font-size: 1.5em;
+    }
+
+    .sideMenu {
+        display: initial;
+        visibility: visible;
+    }
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -1000px;
+        height: 100vh;
+        background: #f9fafb;
+        width: 15rem;
+        padding: 2rem;
+        transition: all 2s;
+    }
+
+    .menu a {
+        color: black;
+    }
+
+    .menu .links,
+    .menu .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}

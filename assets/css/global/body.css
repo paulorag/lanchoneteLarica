@@ -1,0 +1,8 @@
+body {
+    display: flex;
+    background-image: url("/assets/image/background.jpg");
+    font-size: 15px;
+    font-family: "Hepta Slab", serif;
+    margin: 0;
+    min-height: 100vh;
+}
