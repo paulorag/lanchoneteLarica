@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&family=Roboto+Slab:wght@400;700&display=swap');
+@import url("global/normalize.css");
+@import url("global/reset.css");
+@import url("global/font.css");
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
+@import url("components/header.css");
 
 body {
-    background-image: url('../img/background.jpg');
+    background-image: url("../img/background.jpg");
     font-size: 15px;
     display: flex;
     margin: 0;
@@ -31,24 +28,48 @@ header {
     align-items: center;
 }
 
-header h1 {
+.titulo {
     margin-left: 1rem;
     color: #fff;
-    font-family: 'Qwitcher Grypen', cursive;
+    font-family: "Qwitcher Grypen", cursive;
     font-weight: 700;
     font-size: 3em;
 }
 
-header nav {
+.menu {
     display: flex;
-    gap: 4em;
+    gap: 8em;
 }
 
-header nav a {
+.menu a {
     color: #fff;
     font-size: 2em;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 700;
+}
+
+.sideMenu {
+    display: none;
+    visibility: hidden;
+}
+
+.menu.active {
+    right: 0;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.sideMenu img {
+    position: relative;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
 
 .menu-openner {
@@ -74,7 +95,7 @@ header nav a {
 aside {
     background-color: #ffcdd2;
     width: 0vw;
-    transition: all ease .2s;
+    transition: all ease 0.2s;
     overflow-x: hidden;
 }
 
@@ -100,7 +121,7 @@ main {
 h1,
 h2 {
     text-align: center;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 700;
 }
 
@@ -123,7 +144,7 @@ h2 {
 .lanche-item {
     text-align: center;
     max-width: 250px;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 400;
     margin: 0 auto 50px auto;
 }
@@ -138,7 +159,7 @@ h2 {
 .lanche-item--img {
     width: 200px;
     height: 200px;
-    background-color: #EEE;
+    background-color: #eee;
     border-radius: 100px;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
 }
@@ -155,13 +176,12 @@ h2 {
     border-radius: 25px;
     background-color: #d32f2f;
     text-align: center;
-    color: #FFF;
+    color: #fff;
     font-size: 0.8em;
     cursor: pointer;
     margin-top: -25px;
-    transition: all ease .2s;
+    transition: all ease 0.2s;
 }
-
 
 .lanche-item a:hover .lanche-item--add {
     background-color: #b71c1c;
@@ -195,7 +215,7 @@ h2 {
     right: 0;
     background-color: rgba(255, 255, 255, 0.5);
     display: none;
-    transition: all ease .5s;
+    transition: all ease 0.5s;
     justify-content: center;
     align-items: center;
     overflow-y: auto;
@@ -203,7 +223,7 @@ h2 {
 
 .lancheWindowBody {
     width: 900px;
-    background-color: #FFF;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 15px #999;
     display: flex;
@@ -224,7 +244,7 @@ h2 {
 
 .lancheInfo {
     flex: 1;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 400;
     padding-bottom: 50px;
 }
@@ -237,11 +257,11 @@ h2 {
     font-size: 15px;
     color: #474747;
     margin-top: 10px;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
 }
 
 .lancheInfo--sector {
-    color: #CCC;
+    color: #ccc;
     text-transform: uppercase;
     font-size: 14px;
     margin-top: 30px;
@@ -260,7 +280,7 @@ h2 {
 
 .lancheInfo--qtarea {
     display: inline-flex;
-    background-color: #EEE;
+    background-color: #eee;
     border-radius: 10px;
     height: 30px;
 }
@@ -288,7 +308,7 @@ h2 {
     padding: 20px 30px;
     border-radius: 20px;
     background-color: #48d05f;
-    color: #FFF;
+    color: #fff;
     display: inline-block;
     cursor: pointer;
     margin-right: 30px;
@@ -303,7 +323,7 @@ h2 {
     padding: 20px 30px;
     border-radius: 20px;
     background-color: #d04848;
-    color: #FFF;
+    color: #fff;
     display: inline-block;
     cursor: pointer;
     margin-right: 30px;
@@ -335,7 +355,7 @@ h2 {
 
 .cart--item--qtarea {
     display: inline-flex;
-    background-color: #EEE;
+    background-color: #eee;
     border-radius: 10px;
     height: 30px;
 }
@@ -381,35 +401,29 @@ h2 {
     padding: 20px 30px;
     border-radius: 20px;
     background-color: #48d05f;
-    color: #FFF;
+    color: #fff;
     cursor: pointer;
     text-align: center;
     margin-top: 20px;
     border: 2px solid #63f77c;
-    transition: all ease .2s;
+    transition: all ease 0.2s;
 }
 
 .cart--finalizar:hover {
     background-color: #35af4a;
 }
 
-@media (max-width:1050px) {
+@media (max-width: 1024px) {
     .lanche-area {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    header h1 {
+    .titulo {
         font-size: 2.5em;
     }
 
-    header nav {
-        display: flex;
-        gap: 1.7em;
-    }
-
-    header nav a {
-        color: #fff;
-        font-size: 2em;
+    .menu {
+        gap: 4em;
     }
 
     .lanche-item--price {
@@ -418,14 +432,14 @@ h2 {
         color: #000000;
         margin-top: 5px;
     }
-    
+
     .lanche-item--name {
         font-size: 25px;
         font-weight: bold;
         color: #000;
         margin-top: 5px;
     }
-    
+
     .lanche-item--desc {
         font-size: 20px;
         color: #000;
@@ -433,7 +447,7 @@ h2 {
     }
 }
 
-@media (max-width:800px) {
+@media (max-width: 768px) {
     body {
         flex-direction: column;
     }
@@ -450,17 +464,43 @@ h2 {
         display: flex;
     }
 
-    header h1 {
+    .titulo {
         font-size: 2.5em;
     }
 
-    header nav {
+    .menu {
         gap: 1.5em;
     }
 
-    header nav a {
-        color: #fff;
+    .menu a {
         font-size: 1.5em;
+    }
+
+    .sideMenu {
+        display: initial;
+        visibility: visible;
+    }
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -1000px;
+        height: 100vh;
+        background: #f9fafb;
+        width: 15rem;
+        padding: 2rem;
+        transition: all 2s;
+    }
+
+    .menu a {
+        color: black;
+    }
+
+    .menu .links,
+    .menu .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
     aside {
@@ -470,7 +510,7 @@ h2 {
         right: 0;
         top: 0;
         bottom: 0;
-        transition: all ease .2s;
+        transition: all ease 0.2s;
     }
 
     aside.show {
@@ -483,14 +523,14 @@ h2 {
         color: #000000;
         margin-top: 5px;
     }
-    
+
     .lanche-item--name {
         font-size: 25px;
         font-weight: bold;
         color: #000;
         margin-top: 5px;
     }
-    
+
     .lanche-item--desc {
         font-size: 20px;
         color: #000;
@@ -555,5 +595,16 @@ h2 {
         text-align: center;
         margin: 30px auto;
     }
+}
 
+@media (max-width: 425px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 150px;
+    }
+    main {
+        margin-top: 30vh;
+    }
 }

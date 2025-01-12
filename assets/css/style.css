@@ -7,7 +7,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("../img/background.jpg");
+    background-image: url("../image/background.jpg");
     font-family: "Hepta Slab", serif;
     font-size: 15px;
     margin: 0;
@@ -30,7 +30,7 @@ header {
     align-items: center;
 }
 
-header h1 {
+.titulo {
     margin-left: 1rem;
     color: #fff;
     font-family: "Qwitcher Grypen", cursive;
@@ -38,16 +38,40 @@ header h1 {
     font-size: 3em;
 }
 
-header nav {
+.menu {
     display: flex;
-    gap: 4em;
+    gap: 8em;
 }
 
-header nav a {
+.menu a {
     color: #fff;
     font-size: 2em;
     font-family: "Roboto Slab", serif;
     font-weight: 700;
+}
+
+.sideMenu {
+    display: none;
+    visibility: hidden;
+}
+
+.menu.active {
+    right: 0;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.sideMenu img {
+    position: relative;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
 
 .menu-openner {
@@ -101,23 +125,17 @@ header nav a {
     width: 300px;
 }
 
-@media (max-width: 1050px) {
-    .lanche-area {
-        grid-template-columns: repeat(2, 1fr);
-    }
+footer {
+    color: #ffffff;
+}
 
-    header h1 {
+@media (max-width: 1024px) {
+    .titulo {
         font-size: 2.5em;
     }
 
-    header nav {
-        display: flex;
-        gap: 1.7em;
-    }
-
-    header nav a {
-        color: #fff;
-        font-size: 2em;
+    .menu {
+        gap: 4em;
     }
 
     .container {
@@ -144,26 +162,44 @@ header nav a {
     }
 }
 
-@media (max-width: 800px) {
-    body {
-        flex-direction: column;
-    }
-
+@media (max-width: 768px) {
     header {
         display: flex;
     }
 
-    header h1 {
-        font-size: 2.5em;
-    }
-
-    header nav {
+    .menu {
         gap: 1.5em;
     }
 
-    header nav a {
-        color: #fff;
+    .menu a {
         font-size: 1.5em;
+    }
+
+    .sideMenu {
+        display: initial;
+        visibility: visible;
+    }
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -1000px;
+        height: 100vh;
+        background: #f9fafb;
+        width: 15rem;
+        padding: 2rem;
+        transition: all 2s;
+    }
+
+    .menu a {
+        color: black;
+    }
+
+    .menu .links,
+    .menu .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
     .container {
@@ -187,5 +223,17 @@ header nav a {
 
     .conteudo-formas-pagamento img {
         width: 150px;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 35vh;
+    }
+    .container {
+        margin-top: 30vh;
     }
 }
