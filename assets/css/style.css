@@ -1,19 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&family=Roboto+Slab:wght@400;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-}
+@import url("global/reset.css");
+@import url("global/normalize.css");
+@import url("global/font.css");
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('../img/background.jpg');
-    font-family: 'Hepta Slab', serif;
+    background-image: url("../img/background.jpg");
+    font-family: "Hepta Slab", serif;
     font-size: 15px;
     margin: 0;
     min-height: 100vh;
@@ -38,7 +33,7 @@ header {
 header h1 {
     margin-left: 1rem;
     color: #fff;
-    font-family: 'Qwitcher Grypen', cursive;
+    font-family: "Qwitcher Grypen", cursive;
     font-weight: 700;
     font-size: 3em;
 }
@@ -51,7 +46,7 @@ header nav {
 header nav a {
     color: #fff;
     font-size: 2em;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 700;
 }
 
@@ -73,7 +68,7 @@ header nav a {
     background-color: rgba(254, 255, 238, 0.89);
     border-radius: 2em;
     padding: 4em;
-    font-family: 'Roboto Slab', serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 400;
 }
 
@@ -106,7 +101,7 @@ header nav a {
     width: 300px;
 }
 
-@media (max-width:1050px) {
+@media (max-width: 1050px) {
     .lanche-area {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -149,8 +144,7 @@ header nav a {
     }
 }
 
-
-@media (max-width:800px) {
+@media (max-width: 800px) {
     body {
         flex-direction: column;
     }
@@ -194,5 +188,4 @@ header nav a {
     .conteudo-formas-pagamento img {
         width: 150px;
     }
-
 }
