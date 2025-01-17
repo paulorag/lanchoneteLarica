@@ -1,0 +1,119 @@
+aside {
+    background-color: #ffcdd2;
+    width: 0vw;
+    transition: all ease 0.2s;
+    overflow-x: hidden;
+}
+
+aside.show {
+    width: 30vw;
+}
+
+.cart--area {
+    margin-top: 4em;
+    padding: 20px;
+}
+
+.cart--area h1 {
+    display: relative;
+}
+
+.cart {
+    margin-bottom: 20px;
+}
+
+.cart--item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.cart--item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.cart--item-nome {
+    flex: 1;
+}
+
+.cart--item--qtarea {
+    display: inline-flex;
+    background-color: #eee;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.cart--item--qtarea button {
+    border: 0;
+    background-color: transparent;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0px 10px;
+    color: #333;
+}
+
+.cart--item--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color: #000;
+}
+
+.cart--totalitem {
+    padding: 15px 0;
+    border-top: 1px solid #d32f2f;
+    color: #315970;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.cart--totalitem span:first-child {
+    font-weight: bold;
+}
+
+.cart--totalitem.big {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+
+.cart--finalizar {
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #48d05f;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid #63f77c;
+    transition: all ease 0.2s;
+}
+
+.cart--finalizar:hover {
+    background-color: #35af4a;
+}
+
+@media (max-width: 768px) {
+    aside {
+        width: auto;
+        position: fixed;
+        left: 100vw;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: all ease 0.2s;
+    }
+
+    aside.show {
+        width: auto;
+    }
+
+    .cart--area {
+        width: 100vw;
+    }
+}
