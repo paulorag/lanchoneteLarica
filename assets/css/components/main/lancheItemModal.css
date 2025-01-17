@@ -1,125 +1,184 @@
-.lanche-area {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.lancheWindowArea {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
+    transition: all ease 0.5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
 }
 
-.lanche-item {
-    text-align: center;
-    max-width: 250px;
+.lancheWindowBody {
+    width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #999;
+    display: flex;
+    margin: 20px 0px;
+}
+
+.lancheBig {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lancheBig img {
+    height: 250px;
+    width: auto;
+}
+
+.lancheInfo {
+    flex: 1;
     font-family: "Roboto Slab", serif;
     font-weight: 400;
-    margin: 0 auto 50px auto;
+    padding-bottom: 50px;
 }
 
-.lanche-item a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
+.lancheInfo h1 {
+    margin-top: 50px;
 }
 
-.lanche-item--img {
-    width: 200px;
-    height: 200px;
-    background-color: #eee;
-    border-radius: 100px;
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
-}
-
-.lanche-item--img img {
-    width: 100%;
-    height: auto;
-}
-
-.lanche-item--add {
-    width: 80px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 25px;
-    background-color: #d32f2f;
-    text-align: center;
-    color: #fff;
-    font-size: 0.8em;
-    cursor: pointer;
-    margin-top: -25px;
-    transition: all ease 0.2s;
-}
-
-.lanche-item a:hover .lanche-item--add {
-    background-color: #b71c1c;
-}
-
-.lanche-item--price {
-    font-size: 16px;
-    font-weight: 700;
-    color: #000000;
-    margin-top: 5px;
-}
-
-.lanche-item--name {
-    font-size: 20px;
-    font-weight: bold;
-    color: #000;
-    margin-top: 5px;
-}
-
-.lanche-item--desc {
-    font-size: 16px;
-    color: #000;
+.lancheInfo .lancheInfo--desc {
+    font-size: 15px;
+    color: #474747;
     margin-top: 10px;
-}
-@media (max-width: 1024px) {
-    .lanche-area {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .lanche-item--price {
-        font-size: 25px;
-        font-weight: 700;
-        color: #000000;
-        margin-top: 5px;
-    }
-
-    .lanche-item--name {
-        font-size: 25px;
-        font-weight: bold;
-        color: #000;
-        margin-top: 5px;
-    }
-
-    .lanche-item--desc {
-        font-size: 20px;
-        color: #000;
-        margin-top: 10px;
-    }
+    font-family: "Roboto Slab", serif;
 }
 
-@media (max-width: 768px) {
-    .lanche-area {
+.lancheInfo--sector {
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.lancheInfo--price {
+    display: flex;
+    align-items: center;
+}
+
+.lancheInfo--actualPrice {
+    font-size: 28px;
+    margin-right: 30px;
+}
+
+.lancheInfo--qtarea {
+    display: inline-flex;
+    background-color: #eee;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.lancheInfo--qtarea button {
+    border: 0;
+    background-color: transparent;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0px 10px;
+    color: #333;
+}
+
+.lancheInfo--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color: #000;
+}
+
+.lancheInfo--addButton {
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #48d05f;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.lancheInfo--addButton:hover {
+    background-color: #32a345;
+}
+
+.lancheInfo--cancelButton {
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #d04848;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.lancheInfo--cancelButton:hover {
+    background-color: #a33232;
+}
+
+@media (max-width: 769px) {
+    .lancheWindowBody {
+        width: 90vw;
+        height: 90vh;
         display: block;
+        padding: 20px;
+        margin: 0;
     }
 
-    .lanche-item {
-        max-width: 100%;
+    .lancheBig img {
+        width: 30%;
+        height: auto;
     }
 
-    .lanche-item--price {
+    .lancheInfo h1 {
+        margin-top: 15px;
+    }
+
+    .lancheInfo--actualPrice {
         font-size: 25px;
-        font-weight: 700;
-        color: #000000;
-        margin-top: 5px;
+        margin-right: 25px;
     }
 
-    .lanche-item--name {
+    .lancheInfo--qtarea {
+        height: 40px;
+    }
+
+    .lancheInfo--qtarea button {
         font-size: 25px;
-        font-weight: bold;
-        color: #000;
-        margin-top: 5px;
+        padding: 0px 20px;
     }
 
-    .lanche-item--desc {
+    .lancheInfo--qt {
+        line-height: 40px;
         font-size: 20px;
-        color: #000;
-        margin-top: 10px;
+    }
+
+    .lancheInfo--addButton {
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .lancheInfo--cancelButton {
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 426px) {
+    .lancheBig img {
+        width: 45%;
+        height: auto;
     }
 }

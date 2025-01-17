@@ -47,25 +47,6 @@
 }
 
 @media (max-width: 768px) {
-    .container {
-        width: 80%;
-    }
-
-    .conteudo-principal {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-    }
-
-    .conteudo-principal-escrito {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
     .conteudo-formas-pagamento img {
         width: 150px;
     }

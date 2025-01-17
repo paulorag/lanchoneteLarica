@@ -98,7 +98,7 @@ aside.show {
     background-color: #35af4a;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     aside {
         width: auto;
         position: fixed;
@@ -106,7 +106,6 @@ aside.show {
         right: 0;
         top: 0;
         bottom: 0;
-        transition: all ease 0.2s;
     }
 
     aside.show {
@@ -114,6 +113,12 @@ aside.show {
     }
 
     .cart--area {
-        width: 100vw;
+        width: 95vw;
+    }
+}
+
+@media (max-width: 426px) {
+    .cart--area {
+        width: 90vw;
     }
 }

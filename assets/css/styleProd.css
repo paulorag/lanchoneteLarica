@@ -13,7 +13,7 @@
 main {
     flex: 1;
     padding: 20px;
-    margin-top: 60px;
+    margin-top: 10vh;
 }
 
 h1,
@@ -34,7 +34,7 @@ h2 {
     font-size: 2em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     body {
         flex-direction: column;
     }
@@ -44,8 +44,8 @@ h2 {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     main {
-        margin-top: 30vh;
+        margin-top: 40vh;
     }
 }

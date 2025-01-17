@@ -1,178 +1,106 @@
-.lancheWindowArea {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.5);
-    display: none;
-    transition: all ease 0.5s;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
+.lanche-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.lancheWindowBody {
-    width: 900px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px #999;
-    display: flex;
-    margin: 20px 0px;
-}
-
-.lancheBig {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.lancheBig img {
-    height: 250px;
-    width: auto;
-}
-
-.lancheInfo {
-    flex: 1;
+.lanche-item {
+    text-align: center;
+    max-width: 250px;
     font-family: "Roboto Slab", serif;
     font-weight: 400;
-    padding-bottom: 50px;
+    margin: 0 auto 50px auto;
 }
 
-.lancheInfo h1 {
-    margin-top: 50px;
-}
-
-.lancheInfo .lancheInfo--desc {
-    font-size: 15px;
-    color: #474747;
-    margin-top: 10px;
-    font-family: "Roboto Slab", serif;
-}
-
-.lancheInfo--sector {
-    color: #ccc;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-.lancheInfo--price {
+.lanche-item a {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-decoration: none;
 }
 
-.lancheInfo--actualPrice {
-    font-size: 28px;
-    margin-right: 30px;
-}
-
-.lancheInfo--qtarea {
-    display: inline-flex;
+.lanche-item--img {
+    width: 200px;
+    height: 200px;
     background-color: #eee;
-    border-radius: 10px;
-    height: 30px;
+    border-radius: 100px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
 }
 
-.lancheInfo--qtarea button {
-    border: 0;
-    background-color: transparent;
-    font-size: 17px;
-    outline: 0;
+.lanche-item--img img {
+    width: 100%;
+    height: auto;
+}
+
+.lanche-item--add {
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 25px;
+    background-color: #d32f2f;
+    text-align: center;
+    color: #fff;
+    font-size: 0.8em;
     cursor: pointer;
-    padding: 0px 10px;
-    color: #333;
+    margin-top: -25px;
+    transition: all ease 0.2s;
 }
 
-.lancheInfo--qt {
-    line-height: 30px;
-    font-size: 12px;
+.lanche-item a:hover .lanche-item--add {
+    background-color: #b71c1c;
+}
+
+.lanche-item--price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 5px;
+}
+
+.lanche-item--name {
+    font-size: 20px;
     font-weight: bold;
-    padding: 0px 5px;
     color: #000;
+    margin-top: 5px;
 }
 
-.lancheInfo--addButton {
-    margin-top: 30px;
-    padding: 20px 30px;
-    border-radius: 20px;
-    background-color: #48d05f;
-    color: #fff;
-    display: inline-block;
-    cursor: pointer;
-    margin-right: 30px;
+.lanche-item--desc {
+    font-size: 16px;
+    color: #000;
+    margin-top: 10px;
 }
 
-.lancheInfo--addButton:hover {
-    background-color: #32a345;
-}
-
-.lancheInfo--cancelButton {
-    margin-top: 30px;
-    padding: 20px 30px;
-    border-radius: 20px;
-    background-color: #d04848;
-    color: #fff;
-    display: inline-block;
-    cursor: pointer;
-    margin-right: 30px;
-}
-
-.lancheInfo--cancelButton:hover {
-    background-color: #a33232;
-}
-
-@media (max-width: 768px) {
-    .lancheWindowArea {
-        justify-content: center;
-        align-items: center;
+@media (max-width: 1025px) {
+    .lanche-area {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .lancheWindowBody {
-        width: 100vw;
-        display: block;
-        padding: 20px;
-        border-radius: 0;
-        box-shadow: none;
-        margin: 0;
-    }
-
-    .lancheBig img {
-        width: 40%;
-        height: auto;
-    }
-
-    .lancheInfo h1 {
-        margin-top: 20px;
-    }
-
-    .lancheInfo--qtarea {
-        height: 60px;
-    }
-
-    .lancheInfo--qtarea button {
+    .lanche-item--price {
         font-size: 25px;
-        padding: 0px 25px;
     }
 
-    .lancheInfo--qt {
-        line-height: 60px;
-        font-size: 20px;
+    .lanche-item--name {
+        font-size: 25px;
     }
 
-    .lancheInfo--addButton {
+    .lanche-item--desc {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 769px) {
+    .lanche-area {
         display: block;
-        text-align: center;
-        margin: 30px auto;
     }
 
-    .lancheInfo--cancelButton {
+    .lanche-item {
+        max-width: 100%;
+    }
+
+    .lanche-item--price {
         font-size: 20px;
-        display: block;
-        text-align: center;
-        margin: 30px auto;
+    }
+
+    .lanche-item--desc {
+        font-size: 16px;
     }
 }
